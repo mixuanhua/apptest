@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--对撒地方-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -27,9 +27,21 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JW5-u1-fVL">
+                                <rect key="frame" x="177" y="371" width="30" height="30"/>
+                                <state key="normal" title="蓝色">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5sB-ha-zrk" kind="popoverPresentation" popoverAnchorView="JW5-u1-fVL" id="kyV-2d-Zbg">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="对撒地方" id="J1E-lA-7Yd"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -54,6 +66,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKr-dk-NM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="574" y="361"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="R8x-V6-lLT">
+            <objects>
+                <viewController id="5sB-ha-zrk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A5e-t9-K5d"/>
+                        <viewControllerLayoutGuide type="bottom" id="GUG-21-aVj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rjg-UO-CZU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VSe-t3-jgt">
+                                <rect key="frame" x="0.0" y="93" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="arc-Sj-w02">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="41g-ci-TLD">
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="custom" id="oGr-ZC-pkr"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SiZ-E6-KWq">
+                                <rect key="frame" x="0.0" y="235" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="gQ9-ct-zA4"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="tlO-gl-Wkc">
+                        <barButtonItem key="backBarButtonItem" title="低端" id="KJs-vT-jxN"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Vm-sI-oYN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="1045"/>
         </scene>
     </scenes>
 </document>
